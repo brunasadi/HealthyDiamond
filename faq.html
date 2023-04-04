@@ -181,7 +181,53 @@
           </div>
       </div>
   </article>
+<!--inicio calculadora imc-->
 
+
+  <div class="calcimc" align="center" id="imc">
+    <h1>bmi calculator</h1>
+    select your gender
+    <select id="sexo">
+      <option value="m">
+        <h2>women</h2>
+      </option>
+      <option value="h">
+        <h2>men</h2>
+      </option>
+
+
+    </select>
+    <br> <br>
+    put your height (m) <input type="number" id="altura">
+    <br> <br>
+    put your weight (kg) <input type="number" id="massa"> <br><br>
+
+
+    <script>
+      function calcularpeso() {
+
+
+        var sexo = document.getelementbyid("sexo").value;
+        var altura = document.getelementbyid("altura").value;
+        var peso = document.getelementbyid("massa").value;
+
+
+        if (sexo == "men" || sexo == "h") {
+          var total = (peso/(altura*altura));
+          alert("your bmi is: " + total+", look in the table and check your situation");
+        }
+        else if (sexo == "women" || sexo == "m") {
+          var total = (peso/(altura*altura));
+          alert("your bmi is: " + total+", look in the table and check your situation");
+        }
+      }
+
+
+    </script>
+    <input type="button" value=" show your bmi " onclick="calcularpeso()">
+
+
+    <!--fim calculadora imc-->
  
 
 
